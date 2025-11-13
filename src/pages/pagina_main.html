@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indíce de produtos</title>
-    <link href="../src/styles/global.css" rel="stylesheet">
+    <link href="../styles/global.css" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-main">
@@ -32,22 +32,23 @@
         <div class="opcao-nav-4">
             <label for="categoriaProduto">Categoria:
                 <select id="categoriaProduto" name="categoria">
-                    <option value="categoria1">Categoria 1</option>
-                    <option value="categoria2">Categoria 2</option>
-                <option value="categoria3">Categoria 3</option>
+                    <option value="pokebola">Pokebola</option>
+                    <option value="cura">Cura</option>
+                <option value="batalha">Batalha</option>
             </select>
         </label>
 
-        <button type="button">Adicionar produto</button>
+        <button type="button" id="addprod">Adicionar produto</button>
     </div>
 
     <div id="content-navbar-main">
         <!-- Barra de navegação dos produtos -->
         <label for="filtroCategoria">Mostrar produtos da categoria:</label>
         <select id="filtroCategoria" name="filtroCategoria">
-            <option value="categoria1">Categoria 1</option>
-            <option value="categoria2">Categoria 2</option>
-            <option value="categoria3">Categoria 3</option>
+            <option value="todos">Todos</option>
+            <option value="pokebola">Pokebola</option>
+            <option value="cura">Cura</option>
+            <option value="batalha">Batalha</option>
         </select>
     </div>
 
@@ -75,5 +76,11 @@
         </div> -->
 
     <!-- </div> -->
+
+     <!--importando jquery-->
+    <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--código js-->
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
