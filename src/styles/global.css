@@ -1,4 +1,61 @@
+:root {
+    /* Cores do Modo Claro (Padrão) */
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ccc;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Cores do Modo Escuro */
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+    --input-border: #444;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+#toggle-theme {
+    border-radius: 50px;
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    z-index: 1000;
+    
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#toggle-theme:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
 /* Global styles for the index/content area */
+.label {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.input {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+}
+
 #content-index {
     text-align: center;
     margin-top: 50px;
@@ -30,7 +87,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Reusable button style */
 .button,
 button {
     padding: 10px 20px;
@@ -47,7 +103,6 @@ button:hover {
     background-color: #45a049;
 }
 
-/* File label that looks like a button */
 .file-label {
     display: inline-block;
     padding: 8px 14px;

@@ -5,61 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indíce de produtos</title>
     <link href="../styles/global.css" rel="stylesheet">
+    <link href="../styles/main.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
+    <button id="toggle-theme">
+    🌙
+    </button>
+
     <div id="navbar-main">
-        <!-- Barra de navegação -->
-
-        <div class="produto-card">
-            <label for="nomeProduto">Nome do produto: 
-                <input id="nomeProduto" type="text" placeholder="Digite aqui">
-            </label>
+        <div class="produto-group">
+            <label for="nomeProduto" class="label">Nome do produto</label>
+            <input id="nomeProduto" class="input" type="text" placeholder="Nome">
         </div>
 
-        <div class="produto-card">
-            <label for="imagemProduto" class="file-label">
-                Imagem do produto
-                <input id="imagemProduto" name="imagemProduto" type="file">
-            </label>
+        <div class="produto-group">
+            <label for="imagemProduto" class="label">Imagem</label>
+            <input id="imagemProduto" name="imagemProduto" class="input" type="file">
         </div>
 
-        <div class="produto-card">
-            <label for="precoProduto">Preço do produto:
-                <input id="precoProduto" type="number" step="1.00" min="0" placeholder="Digite aqui">
-            </label>
+        <div class="produto-group">
+            <label for="precoProduto" class="label">Preço (R$)</label>
+            <input id="precoProduto" class="input" type="number" step="1.00" min="0" placeholder="0,00">
         </div>
 
-        <div class="produto-card">
-            <label for="categoriaProduto">Categoria:
-                <select id="categoriaProduto" name="categoria">
-                    <option value="pokebola">Pokebola</option>
-                    <option value="cura">Cura</option>
+        <div class="produto-group">
+            <label for="categoriaProduto" class="label">Categoria</label>
+            <select id="categoriaProduto" name="categoria" class="input">
+                <option value="pokebola">Pokebola</option>
+                <option value="cura">Cura</option>
                 <option value="batalha">Batalha</option>
             </select>
-        </label>
+        </div>
 
-        <button type="button" id="addprod">Adicionar produto</button>
+        <div class="produto-action">
+            <button type="button" id="addprod">Adicionar</button>
+        </div>
     </div>
 
     <div id="content-navbar-main">
-        <!-- Barra de navegação dos produtos -->
-        <label for="filtroCategoria">Mostrar produtos da categoria:</label>
-        <select id="filtroCategoria" name="filtroCategoria">
-            <option value="todos">Todos</option>
+        <span class="label">Filtrar por:</span>
+        <select id="filtroCategoria" name="filtroCategoria" class="input">
+            <option value="todos">Mostrar Todos</option>
             <option value="pokebola">Pokebola</option>
             <option value="cura">Cura</option>
             <option value="batalha">Batalha</option>
         </select>
     </div>
 
-    <!--div das listas de produtos--> 
-    <div id="product-list">
-        </div> 
+    <div id="product-list"></div> 
 
-     <!--importando jquery-->
     <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!--código js-->
     <script src="../scripts/script.js"></script>
 </body>
 </html>

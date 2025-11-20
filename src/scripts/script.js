@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+    // Lógica do Modo Escuro
+    $("#toggle-theme").click(function(){
+        // Verifica se o corpo já tem o atributo 'dark'
+        if ($("body").attr("data-theme") === "dark") {
+            // Se for dark, remove (volta pro claro)
+            $("body").removeAttr("data-theme");
+            $(this).text("🌙"); // Muda o texto do botão
+        } else {
+            // Se for claro, adiciona o dark
+            $("body").attr("data-theme", "dark");
+            $(this).text("☀️"); // Muda o texto do botão
+        }
+    });
     
     //variável temporária"para guardar o resultado da imagem 
     var imagemDataUrl = ""; 

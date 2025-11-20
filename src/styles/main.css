@@ -1,0 +1,143 @@
+/* --- BARRA DE MENU PRINCIPAL (Horizontal) --- */
+#navbar-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px var(--shadow);
+    
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+/* Grupos de Input (Label + Campo) */
+.produto-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.produto-group .label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Estilo geral dos Inputs */
+.produto-group .input, 
+#filtroCategoria {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    padding: 8px 10px;
+    border-radius: 4px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+/* Ajuste específico para o input de arquivo (Imagem) */
+#imagemProduto {
+    padding: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    height: 40px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Botão Adicionar (Específico) */
+#addprod {
+    height: 40px;
+    padding: 0 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#addprod:hover {
+    background-color: #45a049;
+}
+
+/* --- ÁREA DE FILTRO (Secundária) --- */
+#content-navbar-main {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    
+    background-color: var(--card-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- LISTA E CARDS DE PRODUTOS --- */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card Individual (Gerado pelo JS) */
+.produto-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    box-shadow: 0 2px 5px var(--shadow);
+    
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    transition: transform 0.2s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.produto-card p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+/* Botão de Retirar (Dentro do Card) */
+.botao-retirar {
+    background-color: #ff4444;
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.botao-retirar:hover {
+    background-color: #cc0000;
+}
