@@ -6,6 +6,7 @@
     --input-bg: #ffffff;
     --input-border: #ccc;
     --shadow: rgba(0, 0, 0, 0.1);
+    --title-color: #8844cd;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
     --input-bg: #2d2d2d;
     --input-border: #444;
     --shadow: rgba(0, 0, 0, 0.5);
+    --title-color: #d69df2;
 }
 
 #toggle-theme {
@@ -38,9 +40,28 @@
 }
 
 body {
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px; 
+    box-sizing: border-box;
+    
+    max-width: 1400px;
+    margin: 0 auto; 
+    
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
     transition: background-color 0.3s, color 0.3s;
+}
+
+#footer-index {
+    margin-top: auto; 
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
 }
 
 /* Global styles for the index/content area */
@@ -69,13 +90,15 @@ body {
 #content-index h1 {
     font-size: 64px;
     margin-bottom: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(51, 48, 197);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--title-color);
 }
 
 #content-index h2 {
     font-size: 80%;
     margin-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif; color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
 }
 
 #footer-index footer {
