@@ -1,5 +1,5 @@
+/* --- Configuração de cores (modo claro e escuro) --- */
 :root {
-    /* Cores do Modo Claro (Padrão) */
     --bg-color: #f4f4f4;
     --text-color: #333;
     --card-bg: #ffffff;
@@ -10,7 +10,6 @@
 }
 
 [data-theme="dark"] {
-    /* Cores do Modo Escuro */
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --card-bg: #1e1e1e;
@@ -20,6 +19,7 @@
     --title-color: #d69df2;
 }
 
+/* --- Botão de trocar o tema --- */
 #toggle-theme {
     border-radius: 50px;
     position: absolute;
@@ -39,6 +39,7 @@
     transform: scale(1.05);
 }
 
+/* --- Layout geral --- */
 body {
     min-height: 100vh;
     
@@ -57,6 +58,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* --- Rodapé (footer) --- */
 #footer-index {
     margin-top: auto; 
     width: 100%;
@@ -64,7 +66,16 @@ body {
     padding-top: 20px;
 }
 
-/* Global styles for the index/content area */
+#footer-index footer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Fontes e textos específicos --- */
 .label {
   font-family: "Quantico", sans-serif;
   font-weight: 400;
@@ -77,6 +88,7 @@ body {
     font-style: normal;
 }
 
+/* --- Área de conteúdo central e títulos --- */
 #content-index {
     text-align: center;
     margin-top: 50px;
@@ -86,7 +98,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Headings inside the content area */
 #content-index h1 {
     font-size: 64px;
     margin-bottom: 20px;
@@ -101,15 +112,7 @@ body {
     color: var(--text-color);
 }
 
-#footer-index footer {
-    font-size: 14px;
-    color: #777;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+/* --- Botões padrão (verdes) --- */
 .button,
 button {
     padding: 10px 20px;
@@ -126,6 +129,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* --- Botão de upload de arquivo (azul) --- */
 .file-label {
     display: inline-block;
     padding: 8px 14px;

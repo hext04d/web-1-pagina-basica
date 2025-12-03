@@ -98,7 +98,7 @@
     padding: 20px;
 }
 
-/* Card Individual (Gerado pelo JS) */
+/* Card Individual */
 .produto-card {
     background-color: var(--card-bg);
     color: var(--text-color);
